@@ -1,0 +1,33 @@
+@font-face {
+    font-family: titiliumWeb;
+    font-weight: bold;
+    src: url("TitilliumWeb-Bold.ttf");
+}
+@font-face {
+    font-family: titiliumWeb;
+    src: url("TitilliumWeb-Regular.ttf");
+}
+/* colors */
+$darkBlue: #1C2340;
+$lightBlue: #2d3e76;
+$lightBlue2: #2f689e;
+
+$purple: #50223C;
+$lightPurple: #5B4352;
+    
+$letterColor:#4D4D4D;
+
+@import "nav";
+@import "menu";
+@import "article";
+
+body{
+    width: 100%;
+    margin: 0px;
+    font-family: titiliumWeb,'Times New Roman', Times, serif,Arial, Helvetica, sans-serif;
+    color: $letterColor;
+    font-weight: bold;
+    font-size: 16pt;
+    letter-spacing:2pt;
+    overflow-x: hidden;
+}

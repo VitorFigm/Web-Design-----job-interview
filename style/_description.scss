@@ -1,0 +1,30 @@
+#descriptionContainer{
+    margin-top: 33pt;
+    width: 100%;
+    color: white;
+    background-color: $lightPurple;
+    display: grid;
+    grid-template-rows: 193pt 193pt;
+    grid-template-columns: 50% 50%;
+    justify-items: center;
+    align-items: center;
+    p{
+        width: fit-content;
+        text-align: center;
+    }
+    img{
+        height: 47pt;
+    }
+    .descriptionItem{
+        width: fit-content;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 1rem;
+    }
+    @media (min-width:800px){
+        display: flex;
+        justify-content: space-evenly;
+        height: 260pt;
+    }
+}

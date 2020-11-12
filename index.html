@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!---SEO-->
+    <!-- Google -->
+    <title>Joe Biden, know who are the newest American President</title>
+    <meta name="description"
+        content="Know all about the newest american president. See intriguing things about his political career.">
+    <meta name="author" content="Vitor Figueiredo Marques">
+
+    <meta name="robots" content="index,follow">
+    <meta name="keywords" content="Joe,Biden,know,about,life,american,president,political,politic">
+    <meta name="revisit-after" content="1 day">
+    <!--Open Graph-->
+    <meta name="og:title" content="Joe Biden, know who are the newest American President">
+    <meta name="og:description"
+        content="Know all about the newest american president. See intriguing things about his political career.">
+    <meta name="og:url" content="https://www.google.com/">
+    <meta name="og:site_name" content="Political website">
+    <meta name="og:image" content="images/joe-biden.jpg">
+    <!-- Twiter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:description"
+        content="Know all about the newest american president. See intriguing things about his political career." />
+    <meta name="twitter:title" content="Joe Biden, know who are the newest American President" />
+    <meta name="twitter:site" content="https://www.google.com/" />
+    <meta name="twitter:image" content="images/joe-biden.jpg" />
+    <meta name="twitter:creator" content="Vitor Figueiredo Marques" /   >
+    <!--Imports-->
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="icon" type="image/svg" href="images/icon/pageIcon.svg"/>
+    <!--javascript-->
+    <script>
+        function showElement(elementId) {
+            const element = document.getElementById(elementId)
+            element.classList.add("visible")
+        }
+        function hideElement(elementId) {
+            const element = document.getElementById(elementId)
+            element.classList.remove("visible")
+        }
+        window.savedScroolY = window.scrollY
+        function controlMouseWithScrool(){
+            const  clientScrolledDown = window.scrollY>window.savedScroolY
+            if(clientScrolledDown){
+                hideElement("navBar")
+            }else{
+                showElement("navBar")
+            }
+            window.savedScroolY = window.scrollY
+        }
+        window.addEventListener('scroll',controlMouseWithScrool)
+    </script>
+</head>
+
+<body>
+    <nav id="navBar" class="visible">
+        <script>
+            function showMenu(event) {
+                showElement('menuScreen')
+                showElement('menu')
+                event.preventDefault()
+            }
+        </script>
+        <a href="#" id="menuBtn" onclick="showMenu(event)"><img src="images/icon/menuBtn.svg" alt="Menu button"></a>
+        <a href="" id="logo">News</a>
+        <a href="" id="search"> <img src="images/icon/searchBtn.svg" alt="Search button"></a>
+    </nav>
+    <div id="menuScreen">
+        <div id="menu">
+            <script>
+                function hideMenu(event) {
+                    hideElement('menuScreen')
+                    hideElement('menu')
+                    event.preventDefault()
+                }
+            </script>
+            <a href="#" id="menuCloseBtn" onclick="hideMenu(event)"><img src="images/icon/closeSymbol.svg"
+                    alt="button to close menu"></a>
+            <a href="#">
+                <img src="images/icon/shopCart.svg" alt="button to shop cart">
+                <div>Shop cart</div>
+            </a>
+            <a href="#">
+                <img src="images/icon/creditCard.svg" alt="button to acess your credit cards">
+                <div>My credit<br>cards</div>
+            </a>
+            <a href="#">
+                <img src="images/icon/messages.svg" alt="button to acess your messages">
+                <div>Messages</div>
+            </a>
+        </div>
+    </div>
+    <article>
+        <img id="jonhBidenImg" alt="image of Jonh Biden" src="images/bidenCircle.png">
+        <h1 class="textTitle">Joe Biden</h1>
+        <p class="mainText">Joseph Robinette Biden Jr. is an American politician and the president-elect of the United
+            States.</p>
+        <p class="mainText">Having defeated incumbent Donald Trump in the 2020 United States presidential election, he will be
+            inaugurated as the 46th president on January 20, 2021. A member of the Democratic Party, Biden served as the
+            47th vice president from 2009 to 2017 and a United States senator for Delaware from 1973 to 2009.</p>
+        <p> Font: <a href="https://pt.wikipedia.org/wiki/Joe_Biden" target="_blank"
+                rel="noopener noreferrer">Wikipedia</a> </p>
+        <section id="descriptionContainer">
+            <div class="descriptionItem">
+                <img src="images/icon/birth.svg" alt="birth of Jonh Biden">
+                <p>November<br>1942</p>
+            </div>
+            <div class="descriptionItem">
+                <img src="images/icon/occupation.svg" alt="occupation of Jonh Biden">
+                <p>Attorney</p>
+            </div>
+            <div class="descriptionItem">
+                <img src="images/icon/spouse.svg" alt="Marital status of Jonh Biden">
+                <p>Married</p>
+            </div>
+            <div class="descriptionItem">
+                <img src="images/icon/education.svg" alt="Education of Jonh Biden">
+                <p>Higher<br>education</p>
+            </div>
+        </section>
+        <section id="recommendations">
+            <script>
+                function activateBtn(btnId) {
+                    const btnElement = document.getElementById(btnId)
+                    btnElement.classList.add("active")
+                }
+                function desactivateBtn(btnId) {
+                    const btnElement = document.getElementById(btnId)
+                    btnElement.classList.remove("active")
+                }
+                function onClickArticleBtn(event) {
+                    showElement("recommendedArticles")
+                    hideElement("politicalProposals")
+                    activateBtn("articleBtn")
+                    desactivateBtn("proposalsBtn")
+                    event.preventDefault()
+                }
+                function onClickProposalsBtn(event) {
+                    showElement("politicalProposals")
+                    hideElement("recommendedArticles")
+                    activateBtn("proposalsBtn")
+                    desactivateBtn("articleBtn")
+                    event.preventDefault()
+                }
+            </script>
+            <div class="btnContainer">
+                <a href="#" onclick="onClickArticleBtn(event)" class="recommendsBtn active" id="articleBtn">Recommended
+                    articles</a>
+                <a href="#" onclick="onClickProposalsBtn(event)" class="recommendsBtn" id="proposalsBtn">Political
+                    proposals</a>
+            </div>
+            <div id="recommendationsMainContainer">
+                <div id="recommendedArticles" class="recommendationsContainer visible">
+                    <a class="recommendationsItem" href="https://pt.wikipedia.org/wiki/Joe_Biden" target="_blank"
+                        rel="noopener noreferrer">
+                        <img src="images/joe-biden.jpg" class="recommendationsImage"></img>
+                        <div class="recommendationsTitle">Jonh Biden<br>Wikipedia</div>
+                    </a>
+                    <a class="recommendationsItem" href="https://pt.wikipedia.org/wiki/Joe_Biden" target="_blank"
+                        rel="noopener noreferrer">
+                        <img src="images/joe-biden.jpg" class="recommendationsImage"></img>
+                        <div class="recommendationsTitle">Jonh Biden<br>Wikipedia</div>
+                    </a>
+                    <a class="recommendationsItem" href="https://pt.wikipedia.org/wiki/Joe_Biden" target="_blank"
+                        rel="noopener noreferrer">
+                        <img src="images/joe-biden.jpg" class="recommendationsImage"></img>
+                        <div class="recommendationsTitle">Jonh Biden<br>Wikipedia</div>
+                    </a>
+                    <a class="recommendationsItem" href="https://pt.wikipedia.org/wiki/Joe_Biden" target="_blank"
+                        rel="noopener noreferrer">
+                        <img src="images/joe-biden.jpg" class="recommendationsImage"></img>
+                        <div class="recommendationsTitle">Jonh Biden<br>Wikipedia</div>
+                    </a>
+                </div>
+
+                <div id="politicalProposals" class="recommendationsContainer">
+                    <a class="recommendationsItem" href="https://joebiden.com/joes-vision/" target="_blank"
+                        rel="noopener noreferrer">
+                        <img src="images/joe-bidenProposal.jpg" class="recommendationsImage"></img>
+                        <div class="recommendationsTitle">Jonh Biden<br>Proposals</div>
+                    </a>
+                    <a class="recommendationsItem" href="https://joebiden.com/joes-vision/" target="_blank"
+                        rel="noopener noreferrer">
+                        <img src="images/joe-bidenProposal.jpg" class="recommendationsImage"></img>
+                        <div class="recommendationsTitle">Jonh Biden<br>Proposals</div>
+                    </a>
+                    <a class="recommendationsItem" href="https://joebiden.com/joes-vision/" target="_blank"
+                        rel="noopener noreferrer">
+                        <img src="images/joe-bidenProposal.jpg" class="recommendationsImage"></img>
+                        <div class="recommendationsTitle">Jonh Biden<br>Proposals</div>
+                    </a>
+                    <a class="recommendationsItem" href="https://joebiden.com/joes-vision/" target="_blank"
+                        rel="noopener noreferrer">
+                        <img src="images/joe-bidenProposal.jpg" class="recommendationsImage"></img>
+                        <div class="recommendationsTitle">Jonh Biden<br>Proposals</div>
+                    </a>
+                </div>
+            </section>
+        </section>
+    </article>
+</body>
+</html>

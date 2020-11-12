@@ -1,0 +1,66 @@
+#recommendations{
+    margin-top: 66pt;
+    width: 100%;
+    .btnContainer{
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        .recommendsBtn{
+            font-size: 0.8rem;
+            letter-spacing:0pt;
+            background-color: $lightBlue2;
+            text-decoration: none;
+            color:white;
+            padding: 10pt 12pt 10pt 12pt;
+            transition: all 0.5s;
+            @media (min-width:800px){
+                font-size: 1rem;
+            }
+            &:not(.active){
+                background-color: $lightBlue;
+                &:hover{
+                    background-color: $darkBlue;
+                }
+            }
+        }
+    }
+    .recommendationsContainer{
+        position: absolute;
+        margin-top: 66pt;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        transition: all 1s;
+        &:not(.visible){
+            transform: translateX(-100vw);
+            opacity: 0;
+        }
+        .recommendationsItem{
+            text-decoration: none;
+            color: $letterColor;
+            width: fit-content;
+            height: fit-content;
+            margin: 10pt;
+            margin-bottom: 33pt;
+            text-align: center;
+            transition: all 0.5s;
+            .recommendationsImage{
+                width: 100pt;
+                transition: all 0.5s;
+            }
+            .recommendationsTitle{
+                font-size: 11pt;
+                line-height: 14pt;
+                transition: all 0.5s;
+            }
+            :hover{
+                opacity: 0.8;
+            }
+        }
+        @media (min-width:800px){
+            width: 80%;
+            left: 10%;
+        }
+    }
+}

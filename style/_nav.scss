@@ -1,0 +1,33 @@
+nav{
+    z-index: 100;
+    width:100%;
+    height: 50pt;
+    display: flex;
+    position: fixed;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $darkBlue;
+    transition: all 0.5s;
+    &:not(.visible){
+        transform: translateY(-55pt);
+    }
+    a{
+        font-size: 1rem;
+        color: white;
+        text-decoration: none;
+        &#search{
+            margin-right: 25pt;
+            height: 21pt;
+            img{
+                height: 21pt;
+            }
+        }
+        &#menuBtn{
+            margin-left: 25pt;
+            height: 18pt;
+            img{
+                height: 18pt;
+            }
+        }
+    }
+}
