@@ -42,20 +42,20 @@ nav a {
 
 nav a#search {
   margin-right: 25pt;
-  height: 21pt;
+  height: 18pt;
 }
 
 nav a#search img {
-  height: 21pt;
+  height: 18pt;
 }
 
 nav a#menuBtn {
   margin-left: 25pt;
-  height: 18pt;
+  height: 13pt;
 }
 
 nav a#menuBtn img {
-  height: 18pt;
+  height: 13pt;
 }
 
 #menuScreen {
@@ -78,15 +78,15 @@ nav a#menuBtn img {
 
 #menuScreen #menu {
   width: 100%;
-  height: 290pt;
+  height: 180pt;
   background-color: #2d3e76;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
+  -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+      -ms-flex-direction: row;
+          flex-direction: row;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -94,13 +94,28 @@ nav a#menuBtn img {
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
   text-align: center;
+  font-size: 11pt;
   -webkit-transition: all 1s ease-in-out;
   transition: all 1s ease-in-out;
 }
 
+@media (min-width: 600px) {
+  #menuScreen #menu {
+    font-size: 16pt;
+    height: 290pt;
+  }
+}
+
 #menuScreen #menu:not(.visible) {
-  -webkit-transform: translateX(-100vw);
-          transform: translateX(-100vw);
+  -webkit-transform: translateY(-100vh);
+          transform: translateY(-100vh);
+}
+
+@media (min-width: 600px) {
+  #menuScreen #menu:not(.visible) {
+    -webkit-transform: translateX(-100vw);
+            transform: translateX(-100vw);
+  }
 }
 
 #menuScreen #menu a {
@@ -109,7 +124,13 @@ nav a#menuBtn img {
 }
 
 #menuScreen #menu img:not(#menuCloseBtn) {
-  height: 30pt;
+  height: 20pt;
+}
+
+@media (min-width: 600px) {
+  #menuScreen #menu img:not(#menuCloseBtn) {
+    height: 30pt;
+  }
 }
 
 #menuScreen #menu #menuCloseBtn {
@@ -120,15 +141,6 @@ nav a#menuBtn img {
 
 #menuScreen #menu #menuCloseBtn img {
   height: 18pt;
-}
-
-@media (min-width: 600px) {
-  #menuScreen #menu {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-  }
 }
 
 article {
