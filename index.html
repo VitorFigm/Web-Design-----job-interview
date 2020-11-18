@@ -43,7 +43,7 @@
             element.classList.remove("visible")
         }
         window.savedScroolY = window.scrollY
-        function controlMouseWithScrool(){
+        function scrollControl(){
             const  clientScrolledDown = window.scrollY>window.savedScroolY
             if(clientScrolledDown){
                 hideElement("navBar")
